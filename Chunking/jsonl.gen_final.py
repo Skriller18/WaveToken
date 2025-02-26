@@ -114,8 +114,8 @@ def process_files(subtitle_dir, audio_dir, output_base_dir, language, subtitles,
     jsonl_data = []
 
     for subtitle_file in os.listdir(subtitle_dir):
-        if subtitle_file.endswith('.vtt'):
-            base_name = subtitle_file[:-4]  # Remove '.hi_final.vtt'
+        if subtitle_file.endswith('.en.vtt'):
+            base_name = subtitle_file[:-7]  # Remove '.hi_final.vtt'
             audio_file = os.path.join(audio_dir, f"{base_name}.wav")
             
             if not os.path.exists(audio_file):
